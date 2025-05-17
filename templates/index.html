@@ -1,0 +1,27 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Race/Ethnicity Predictor</title>
+</head>
+<body>
+    <h2>Predict Race/Ethnicity</h2>
+    <form method="POST">
+        <label>Math Score:</label><br>
+        <input type="number" name="math" required><br><br>
+
+        <label>Reading Score:</label><br>
+        <input type="number" name="reading" required><br><br>
+
+        <label>Writing Score:</label><br>
+        <input type="number" name="writing" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h3>Prediction: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
